@@ -1,0 +1,12 @@
+declare namespace _default {
+    const __init__: string[];
+    const idBehavior: (string | typeof IdBehavior)[];
+    const keyBehavior: (string | typeof KeyBehavior)[];
+    const pathBehavior: (string | typeof PathBehavior)[];
+    const validateBehavior: (string | typeof ValidateBehavior)[];
+}
+export default _default;
+import IdBehavior from './IdBehavior';
+import KeyBehavior from './KeyBehavior';
+import PathBehavior from './PathBehavior';
+import ValidateBehavior from './ValidateBehavior';

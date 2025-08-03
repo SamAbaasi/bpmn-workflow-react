@@ -1,0 +1,36 @@
+{
+  "name": "@bpmn-io/form-js-carbon-styles",
+  "version": "1.3.0",
+  "description": "Custom carbon styles for form-js",
+  "main": "src/carbon-styles.js",
+  "types": "src/types/carbon-styles.d.ts",
+  "scripts": {
+    "all": "run-s test",
+    "test": "karma start",
+    "dev": "npm test -- --auto-watch --no-single-run"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpmn-io/form-js.git",
+    "directory": "packages/form-js-carbon-styles"
+  },
+  "author": {
+    "name": "bpmn.io contributors",
+    "url": "https://github.com/bpmn-io"
+  },
+  "devDependencies": {
+    "@bpmn-io/form-js-viewer": "^1.3.0",
+    "@carbon/elements": "^11.19.1",
+    "@types/styled-components": "^5.1.26",
+    "styled-components": "^6.0.0"
+  },
+  "peerDependencies": {
+    "@carbon/elements": ">=11",
+    "styled-components": ">=5"
+  },
+  "files": [
+    "src"
+  ],
+  "gitHead": "f7cc5395b19de74eb7d9183af38dc462170a6179"
+}

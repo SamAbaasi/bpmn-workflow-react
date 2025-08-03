@@ -1,0 +1,61 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BPMN.js specific styles */
+.bjs-container {
+  @apply w-full h-full;
+}
+
+.djs-palette {
+  @apply bg-white border border-gray-200 shadow-lg;
+}
+
+.djs-context-pad {
+  @apply bg-white border border-gray-200 shadow-lg;
+}
+
+.bio-properties-panel {
+  @apply bg-gray-50 border-l border-gray-200;
+}
+
+.bio-properties-panel-header {
+  @apply bg-gray-100 border-b border-gray-200 p-3;
+}
+
+.bio-properties-panel-entry {
+  @apply p-3 border-b border-gray-100;
+}
+
+.bio-properties-panel-entry:last-child {
+  @apply border-b-0;
+}
+
+.bio-properties-panel-label {
+  @apply text-sm font-medium text-gray-700 mb-1;
+}
+
+.bio-properties-panel-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.bio-properties-panel-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-y;
+}
+
+.bio-properties-panel-select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white;
+}
+
+/* Custom BPMN element styles */
+.highlight-fill {
+  fill: rgba(59, 130, 246, 0.1) !important;
+  stroke: rgb(59, 130, 246) !important;
+  stroke-width: 2px !important;
+}
+
+.highlight-stroke {
+  stroke: rgb(59, 130, 246) !important;
+  stroke-width: 2px !important;
+}

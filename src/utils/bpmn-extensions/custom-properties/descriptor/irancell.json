@@ -1,0 +1,357 @@
+{
+  "name": "Irancell",
+  "prefix": "irancell",
+  "uri": "http://mtnitancell.ir/schema/irancell/1.0",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "MessageType",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "messageTypeSelected",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "SMSConfiguration",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "reciverGroupForSMS",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "reciverUserForSMS",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "reciverNumberForSMS",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "messageTextForSMS",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Receiver",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "reciverGroup",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "reciverUser",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "reciverEmail",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Sender",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "mailSender",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Compose",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "composeSubject",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "composeBody",
+          "isBody": true,
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "StartExecutionListener",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "class",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "EndExecutionListener",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "class",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Form",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "formName",
+          "isBody": true,
+          "type": "String"
+        },
+        {
+          "name": "activity",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "StartDataFieldInjection",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "values",
+          "isMany": true,
+          "type": "ParameterStartDataField"
+        }
+      ]
+    },
+    {
+      "name": "EndDataFieldInjection",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "values",
+          "isMany": true,
+          "type": "ParameterEndDataField"
+        }
+      ]
+    },
+    {
+      "name": "Variables",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "site",
+          "isBody": true,
+          "type": "String"
+        },
+        {
+          "name": "location",
+          "isBody": true,
+          "type": "String"
+        },
+        {
+          "name": "assignTo",
+          "isBody": true,
+          "type": "String"
+        },
+        {
+          "name": "level",
+          "isBody": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "WFM",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "tag",
+          "isBody": true,
+          "type": "String"
+        },
+        {
+          "name": "taskType",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "offline",
+          "type": "Boolean",
+          "isAttr": true
+        }
+      ]
+    },
+    {
+      "name": "ParameterEndDataField",
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ParameterStartDataField",
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Outputs",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "values",
+          "isMany": true,
+          "type": "ParameterOutputs"
+        }
+      ]
+    },
+    {
+      "name": "ParameterOutputs",
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Groups",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "values",
+          "isMany": true,
+          "type": "ParameterGroups"
+        }
+      ]
+    },
+    {
+      "name": "ParameterGroups",
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "SMSDetail",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "phoneNumber",
+          "type": "String",
+          "isBody": true
+        },
+        {
+          "name": "MessageText",
+          "type": "String",
+          "isBody": true
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "UserNotification",
+      "superClass": ["Element"],
+      "properties": [
+        {
+          "name": "notifBySMS",
+          "type": "Boolean",
+          "isAttr": true
+        },
+        {
+          "name": "notifByEmail",
+          "type": "Boolean",
+          "isAttr": true
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}

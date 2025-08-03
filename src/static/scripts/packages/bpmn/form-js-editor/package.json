@@ -1,0 +1,66 @@
+{
+  "name": "@bpmn-io/form-js-editor",
+  "version": "1.3.1",
+  "description": "Edit forms - powered by bpmn.io",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/assets/form-js-editor.css": "./dist/assets/form-js-editor.css",
+    "./dist/assets/form-js-editor-base.css": "./dist/assets/form-js-editor-base.css",
+    "./dist/assets/dragula.css": "./dist/assets/dragula.css",
+    "./dist/assets/properties-panel.css": "./dist/assets/properties-panel.css",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "all": "run-s lint test build",
+    "build": "run-p bundle bundle:scss generate-types",
+    "bundle": "rollup -c --failAfterWarnings --bundleConfigAsCjs",
+    "bundle:scss": "sass --no-source-map --load-path=\"../../node_modules\" assets/index.scss dist/assets/form-js-editor.css",
+    "bundle:watch": "run-p bundle:watch-js bundle:watch-scss",
+    "bundle:watch-js": "rollup -c -w --bundleConfigAsCjs",
+    "bundle:watch-scss": "npm run bundle:scss -- --watch",
+    "dev": "npm test -- --auto-watch --no-single-run",
+    "example:dev": "cd example && npm start",
+    "lint": "run-s lint:*",
+    "lint:eslint": "eslint .",
+    "generate-types": "tsc --allowJs --skipLibCheck --declaration --emitDeclarationOnly --outDir dist/types src/index.js && copyfiles --flat src/**.d.ts dist/types",
+    "test": "cross-env NODE_ENV=test karma start",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpmn-io/form-js.git",
+    "directory": "packages/form-js-editor"
+  },
+  "author": {
+    "name": "bpmn.io contributors",
+    "url": "https://github.com/bpmn-io"
+  },
+  "dependencies": {
+    "@bpmn-io/draggle": "^4.0.0",
+    "@bpmn-io/form-js-viewer": "^1.3.0",
+    "@bpmn-io/properties-panel": "^3.8.0",
+    "array-move": "^3.0.1",
+    "big.js": "^6.2.1",
+    "ids": "^1.0.0",
+    "min-dash": "^4.0.0",
+    "min-dom": "^4.0.0",
+    "preact": "^10.5.14"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "gitHead": "0c629e002118aaabaa538415e3c922e7f5d3ae4c"
+}
